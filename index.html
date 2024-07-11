@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            width: 400px;
+            background-color: #ffe6f2; /* Light pink background */
+            border: 1px solid #ff99cc; /* Darker pink border */
+            border-radius: 10px; /* Rounded corners */
+        }
+        .card-title, .card-text {
+            color: #cc0066; /* Dark pink text color */
+        }
+        .btn-primary {
+            background-color: #ff66b2; /* Pink button background */
+            border-color: #ff66b2; /* Pink button border */
+        }
+        .btn-primary:hover {
+            background-color: #ff3385; /* Darker pink button background on hover */
+            border-color: #ff3385; /* Darker pink button border on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <header>
+                <h1>BALLIN FIESTA</h1>
+                <h2>You're Invited to Our Grand Festival!</h2>
+            </header>
+            <main>
+                <img src="Components/rose1.jfif" alt="Rose Flower" class="rose-flower">
+                <p class="invitation-text">Join us for a day of fun, food, and festivities!</p>
+                <p class="details">
+                    Date: July 24, 2024<br>
+                    Time: 10:00 AM - 8:00 PM<br>
+                    Venue: Central Park, Main City
+                </p>
+                
+                <form id="rsvpForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" class="form-control" pattern="[0-9]{10}" inputmode="numeric" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount (Token of Appreciation):</label>
+                        <input type="number" id="amount" name="amount" placeholder="Enter the amount" class="form-control" required>
+                    </div>
+                    <button type="submit" class="primary-button">Add Guest</button>
+                </form>
+                <div id="guestList" class="guest-list">
+                    <h3>Party Guests</h3>
+                    <ul id="guestNames"></ul>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
